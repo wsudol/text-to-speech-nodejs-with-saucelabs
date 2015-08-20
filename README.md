@@ -1,10 +1,16 @@
-# Text to Speech Nodejs Starter Application
+# Example of an IBM Bluemix DevOps Services Toolchain integrated with Sauce Labs
+
+(work in progress)
+
+<!-- A simple pipeline with a HelloWorld Node.js application that runs tests via Sauce Labs. This is an easy way to get a pre-configured pipeline with all the environment variables set and ready to go! The Sauce Labs username and API key fields will need to be filled in with valid information before the stage will run correctly.-->
+
+Give it a try! Click the button below to fork into IBM DevOps Services and deploy your own copy of this application on Bluemix, with a DevOps toolchain already configured and awaiting for your further edits...
+
+[![Deploy To Bluemix](https://bluemix.net/deploy/button.png)](https://dev01.hub.jazz.net/deploy/index.html?repository=https://github.com/hmagph/text-to-speech-nodejs-with-saucelabs)
+
+## Text to Speech Nodejs Starter Application
 
   The IBM Watson [Text to Speech][service_url] service is designed for streaming, low latency, synthesis of audio from text. It is the inverse of the automatic speech recognition. The TTS service can be accessed via a REST interface or directly via TCP.
-
-Give it a try! Click the button below to fork into IBM DevOps Services and deploy your own copy of this application on Bluemix.
-
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/text-to-speech-nodejs)
 
 ## Getting Started
 
