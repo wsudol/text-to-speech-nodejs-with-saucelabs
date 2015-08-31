@@ -9,6 +9,20 @@
     "jade": "~1.9.2",
     "watson-developer-cloud": "~0.9.18"
   },
+  "devDependencies": {
+    "grunt-env": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-simple-mocha": "latest",
+    "grunt-concurrent": "latest",
+    "grunt-contrib-watch": "latest",
+    "wd": "latest",
+    "chai": "latest",
+    "chai-as-promised": "latest",
+    "lodash": "latest",
+    "colors": "latest",
+    "grunt": "~0.4.5",
+    "mocha-jenkins-reporter": "0.1.9"   
+  },  
   "engines": {
     "node": "0.10.38"
   },
