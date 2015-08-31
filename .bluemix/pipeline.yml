@@ -18,10 +18,10 @@ stages:
   - type: stage
   properties:
   - name: CF_APP_NAME
-    value: ''
+    value: 'undefined'
     type: text
-  - name: TEST_URL
-    value: ''
+  - name: APP_URL
+    value: 'undefined'
     type: text
   jobs:
   - name: Deploy to dev
@@ -37,7 +37,21 @@ stages:
 
       export CF_APP_NAME="$CF_APP"
       URL=$(cf app $CF_APP | grep 'urls:' | awk '{print $2}' | cut -d '*' -f 2)
-      export TEST_URL="https://$URL"
+      export APP_URL="https://$URL"
 
       # View logs
       #cf logs "${CF_APP}" --recent
+  - name: Sauce Labs Tests
+    extension_id: ibm.devops.services.pipeline.saucelabs
+    type: tester
+    target:
+      url: ${CF_TARGET_URL}
+      organization: ${CF_ORGANIZATION}
+      space: ${CF_SPACE}
+    ACCESS: ${API_KEY}
+    DL_ASSETS: 'true'
+    SELECT_CMD: grunt test
+    USER_ID: ${SAUCE_USER}
+    COMMAND: '#!/bin/bash'
+    enable_tests: true
+    test_file_pattern: '*.xml'
