@@ -1,8 +1,10 @@
-repo:
-	capability: github
+---
 build:
-	capability: pipeline
-	metadata: pipeline.yml
+  capability: pipeline
+  metadata: pipeline.yml
+  env:
+    SAUCE_USER: ${test.parameters.username}
+    API_KEY: ${test.parameters.key}
 test:
-	capability: saucelabs
-	metadata: saucelabls.yml
+  capability: saucelabs
+  metadata: saucelabs.yml
