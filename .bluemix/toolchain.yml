@@ -8,3 +8,6 @@ build:
 test:
   capability: saucelabs
   metadata: saucelabs.yml
+candy:
+  capability: chocolate
+  metadata: chocolate.yml  
