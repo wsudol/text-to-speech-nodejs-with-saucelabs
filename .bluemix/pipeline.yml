@@ -36,7 +36,10 @@ stages:
       cf push "${CF_APP}"
 
       export CF_APP_NAME="$CF_APP"
-      URL=$(cf app $CF_APP | grep 'urls:' | awk '{print $2}' | cut -d '*' -f 2)
+      URL=$(cf app $CF_APP_NAME | grep 'urls:' | awk '{print $2}' | cut -d '*' -f 2)
+        if [[ "$URL" =~ ','$ ]]; then
+          URL="${URL%?}"
+        fi
       export APP_URL="https://$URL"
 
       # View logs
