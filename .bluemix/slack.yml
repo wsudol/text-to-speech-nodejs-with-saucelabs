@@ -1,4 +1,4 @@
 ---
 parameters:
   auth-token: xoxp
-  channelName: #otc
+  channelName: %23otc
